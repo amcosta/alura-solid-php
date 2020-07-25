@@ -16,7 +16,7 @@ class AluraMais extends Video implements IPontuacao
 
     public function recuperarUrl(): string
     {
-        return str_replace(' ', '-', strtolower($this->categoria));
+        return new Slug('http://videos.alura.com.br/' . $this->categoria);
     }
 
     public function pontuacao(): int
